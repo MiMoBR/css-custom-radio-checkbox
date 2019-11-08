@@ -1,0 +1,74 @@
+					<div class="form-group customRadioBox">
+						<div>
+							<input class="customRadio" id="kindOf_0" name="kindOf" type="radio" value="Vacation">
+							<label for="kindOf_0">Vacation</label>
+						</div>
+						<div>
+							<input class="customRadio" id="kindOf_1" name="kindOf" type="radio" value="Business">
+							<label for="kindOf_1">Business</label>							
+						</div>
+					</div>
+          
+          
+          /*  Checkbox Custom  */
+.customRadio {
+  position: absolute;
+  opacity: 0;
+}
+.customRadio + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.customRadio + label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 2px solid #399ed8;
+  border-radius: 30px;
+}
+.customRadio:hover + label:before {
+  background: #399ed8;
+}
+.customRadio:checked + label:before {
+  background: #399ed8;
+}
+.customRadio:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+.customRadio:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+.customRadio:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  background: #111212;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 #111212, 4px 0 0 #111212, 4px -2px 0 #111212, 4px -4px 0 #111212, 4px -6px 0 #111212, 4px -8px 0 #111212, 4px -10px 0 #111212;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+:focus {
+  outline: -webkit-focus-ring-color auto 0px !important;
+}
+.customRadioBox{
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .customRadioBox{
+    display: block;
+  } 
+}
+/*  Checkbox Custom  */
